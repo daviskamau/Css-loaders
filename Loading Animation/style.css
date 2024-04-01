@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: blueviolet;
+}
+
+h1 {
+  margin-bottom: 70px;
+  color: white;
+}
+
+.container {
+  position: relative;
+}
+
+.container span {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  transform: rotate(calc(var(--i) * (360deg / 20))) translate(50px);
+  animation: rotationAnim 2s linear infinite;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes rotationAnim {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
