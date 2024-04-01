@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-family: sans-serif;
+}
+
+.loader {
+  width: 250px;
+  height: 50px;
+  color: blueviolet;
+  line-height: 50px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: blueviolet;
+  position: absolute;
+  animation: loading 0.8s infinite alternate ease-in-out;
+}
+
+.loader::before {
+  top: 0;
+}
+
+.loader::after {
+  bottom: 0;
+}
+
+@keyframes loading {
+  0% {
+    left: 0;
+    height: 30px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 40px;
+  }
+  100% {
+    left: 235px;
+    height: 30px;
+    width: 15px;
+  }
+}

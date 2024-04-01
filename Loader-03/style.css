@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: black;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  height: 25px;
+  width: 25px;
+  position: relative;
+  animation: rotate 5s infinite;
+}
+
+.ball {
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upper {
+  left: 0;
+  top: -25px;
+  background: blue;
+  animation: upper 1s linear infinite;
+}
+@keyframes upper {
+  50% {
+    top: 25px;
+  }
+  100% {
+    top: 25px;
+  }
+}
+
+.right {
+  right: -25px;
+  top: 0;
+  background: red;
+  animation: right 1s linear infinite;
+}
+@keyframes right {
+  50% {
+    right: 25px;
+  }
+  100% {
+    right: 25px;
+  }
+}
+
+.lower {
+  bottom: -25px;
+  left: 0;
+  background: yellow;
+  animation: lower 1s linear infinite;
+}
+@keyframes lower {
+  50% {
+    bottom: 25px;
+  }
+  100% {
+    bottom: 25px;
+  }
+}
+
+.left {
+  left: -25px;
+  top: 0;
+  background: green;
+  animation: left 1s linear infinite;
+}
+@keyframes left {
+  50% {
+    left: 25px;
+  }
+  100% {
+    left: 25px;
+  }
+}
